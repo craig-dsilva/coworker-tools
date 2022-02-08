@@ -21,6 +21,15 @@ if (command === "list") {
 }
 
 function runListCommand() {
-  // Replace this with your implementation
-  console.log("Called the list command");
+  let membersList = members.map(
+    (member) =>
+      `First Name:${member.firstName} Last Name:${member.lastName} Job Title:${
+        member.jobTitle
+      } Department:${member.department} Manager:${member.manager} Location:${
+        member.location
+      } First Aider: ${member.firstAider ? "Yes" : "No"} Slack Name: ${
+        member.userSlack
+      } Timezone:${member.timezone}`
+  );
+  console.log(membersList);
 }
