@@ -25,11 +25,12 @@ function runListCommand() {
     (member) =>
       `First Name:${member.firstName} Last Name:${member.lastName} Job Title:${
         member.jobTitle
-      } Department:${member.department} Manager:${member.manager} Location:${
-        member.location
-      } First Aider: ${member.firstAider ? "Yes" : "No"} Slack Name: ${
-        member.userSlack
-      } Timezone:${member.timezone}`
+      } Department:${member.department} Manager:${
+        member.manager ? member.manager : "N/A"
+      } Location:${member.location} First Aider: ${
+        member.firstAider ? "Yes" : "No"
+      } Slack Name: ${member.userSlack} Timezone:${member.timezone}`
   );
   console.log(membersList);
 }
+// Running the command `npm start list` displays the information of the members in the console
